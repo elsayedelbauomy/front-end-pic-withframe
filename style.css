@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.parent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #eee;
+    
+}
+.container {
+    display: flex;
+    width: 100%;
+    /* justify-content: space-between; */
+    align-items: center;
+    background-color: #fff;
+    padding: 108px 50px;
+    gap: 20px 50px;
+}
+@media (max-width:767px) {
+    .container {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.container .imge  {
+    flex: 1;
+    position: relative ;
+    z-index: 2;
+    max-height: 350px;
+}
+
+@media (max-width:767px) {
+    .container .imge {
+        margin-bottom: 30px;
+    }
+}
+
+.container .imge::before {
+    content: "";
+    position: absolute;
+    border: 28px solid #f88992;
+    top: -44px;
+    left: 54px;
+    width: 63%;
+    height: 110%;
+    z-index: -1;
+}
+
+.container .imge img  {
+    max-width: 400px;
+}
+
+@media (max-width:767px) {
+    .container .imge img {
+        max-width: 200px;
+    }
+
+    .container .imge::before {
+        top: -37px;
+    }
+}
+
+.container .box {
+    width: 700px;
+}
+
+
+.container .box h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+@media (max-width:767px) {
+    .container .box h2 {
+        font-size: 30px;
+        margin-bottom: 10px;
+        
+    }
+}
+.container .box   .shape {
+    display: flex;
+    align-items: center;
+}
+.container .box   .shape span {
+    margin-bottom: 10px;
+    color: #f23779;
+    position: relative;
+}
+.container .box .line {
+    width: 60px;
+    background-color: #f23779;
+    height: 1px;
+    margin-right: 3px;
+}
+.container .box .shape .line::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #f23779;
+    transform: translateY(-50%);
+    top: 50%;
+    left: -5px;
+}
+
+.container .box p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.container .icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.container .icons div {
+    border: 1px solid #eee;
+    padding: 40px;
+    position: relative;
+}
+
+.container .icons div::before {
+    content: "";
+    position: absolute;
+    border: 12px solid #f23779;
+    top: -10px;
+    right: -9px;
+    border-color: transparent #f23779 transparent transparent;
+    transform: rotate(134deg);
+}
+
+.container .icons span{
+    display: block;
+}
+
+.container .icons img  {
+    width: 67px;
+    height: 67px;
+}
+
+@media (max-width:767px) {
+.container .icons img {
+    width: 40px;
+    height: 40px;
+
+}
+
+.container .icons div {
+    padding: 20px;
+    
+}
+
+}
